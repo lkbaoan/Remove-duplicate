@@ -1,0 +1,25 @@
+// Khac Bao An Le
+// Remove duplicate
+// Remove duplicate and leave only one exist
+// Version 1
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main()
+{
+  vector<int> remove_duplicate = {1, 4, 9, 16, 9, 7, 4, 9, 11};
+  for (int i = 0; i < remove_duplicate.size(); i++)
+  {
+    for (int j = 0; j < remove_duplicate.size(); j++)
+    {
+      if (i != j && remove_duplicate[i] == remove_duplicate[j])
+      remove_duplicate.erase(remove_duplicate.begin()+j);
+    }
+  }
+  for (int i = 0; i < remove_duplicate.size(); i++)
+  {
+    cout << remove_duplicate[i] << " ";
+  }
+}
